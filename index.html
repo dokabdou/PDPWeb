@@ -17,5 +17,18 @@
     </iframe>
 
     <!---<script src="scripts.js"></script>-->
+    <script>
+        // Function to fetch data from Google Apps Script and update iframe
+        function fetchDataAndUpdateIframe() {
+            // Reference to the iframe
+            const iframe = document.getElementById('google-script-frame');
+            
+            // Reload the iframe to fetch new data
+            iframe.contentWindow.location.reload(true);
+        }
+
+        // Auto-refresh the page every 5 seconds
+        setInterval(fetchDataAndUpdateIframe, 5000); // 5000 milliseconds = 5 seconds
+    </script>
 </body>
 </html>
